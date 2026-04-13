@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YourMasterOverseer Arena</title>
+  <style>
+    body {
+      margin: 0;
+      background: #050711;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    #controls {
+      padding: 8px 12px;
+      background: #0b0f1e;
+      border-bottom: 1px solid #222842;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
+    }
+
+    #controls input {
+      padding: 4px 6px;
+      background: #050711;
+      border: 1px solid #222842;
+      color: #fff;
+      width: 320px; /* ← WIDE ENOUGH FOR FULL GIN */
+    }
+
+    #controls button {
+      padding: 4px 10px;
+      background: #2b5cff;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #controls button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    #game-container {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <span>Bot 1 GIN:</span>
+    <input id="bot1" placeholder="GIN-BOT-BATTLE-XXXX-YYYY" />
+
+    <span>Bot 2 GIN:</span>
+    <input id="bot2" placeholder="GIN-BOT-BATTLE-ZZZZ-WWWW" />
+
+    <button id="runBattleBtn">Run Battle</button>
+    <span id="status"></span>
+  </div>
+
+  <div id="game-container"></div>
+
+  <!-- Phaser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+
+  <!-- Main Arena UI -->
+  <script src="main.js"></script>
+</body>
+</html>
