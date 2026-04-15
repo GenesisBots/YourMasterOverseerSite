@@ -1,82 +1,141 @@
-body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#050816;color:#f9fafb}
-a{color:#38bdf8;text-decoration:none}
-a:hover{text-decoration:underline}
-header{padding:20px 32px;border-bottom:1px solid #1f2933;background:rgba(3,7,18,0.9);backdrop-filter:blur(10px);position:sticky;top:0;z-index:10}
-nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
-nav .logo{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:14px;color:#e5e7eb}
-nav .links a{margin-left:18px;font-size:14px;color:#9ca3af}
-main{max-width:1100px;margin:0 auto;padding:40px 20px 80px}
-.hero{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:40px;align-items:center}
-.hero h1{font-size:40px;line-height:1.1;margin-bottom:16px;color:#f9fafb}
-.hero p{color:#9ca3af;font-size:15px;line-height:1.6}
-.hero .tag{display:inline-flex;align-items:center;border-radius:999px;border:1px solid #1f2933;padding:4px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#9ca3af;margin-bottom:12px}
-.hero .primary-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:20px;padding:10px 18px;border-radius:999px;background:linear-gradient(135deg,#22c55e,#22d3ee);color:#020617;font-weight:600;font-size:14px;border:none;cursor:pointer}
-.hero .secondary-link{display:inline-flex;align-items:center;margin-top:10px;font-size:13px;color:#9ca3af}
-.section{margin-top:60px}
-.section h2{font-size:22px;margin-bottom:10px;color:#e5e7eb}
-.section p{color:#9ca3af;font-size:14px;max-width:640px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:20px}
-.card{border-radius:14px;border:1px solid #1f2933;padding:16px;background:radial-gradient(circle at top,#020617,#020617 40%,#020617)}
-.card h3{font-size:15px;margin-bottom:6px;color:#e5e7eb}
-.card p{font-size:13px;color:#9ca3af}
-.badge{display:inline-flex;align-items:center;border-radius:999px;border:1px solid #1f2933;padding:2px 8px;font-size:11px;color:#9ca3af;margin-bottom:6px}
-.footer{border-top:1px solid #1f2933;padding:18px 20px;color:#6b7280;font-size:12px;text-align:center;margin-top:60px}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:30px}}
-
 /* -------------------------------------------------- */
-/* GENESIS COLOR ENHANCEMENT PACK                     */
+/* BASE LAYOUT + TYPOGRAPHY                           */
 /* -------------------------------------------------- */
 
-/* GLOBAL BACKGROUND — subtle nebula gradient */
 body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: radial-gradient(circle at 20% 20%, #0a0f2b 0%, #050816 55%, #030712 100%);
     color: #f9fafb;
 }
 
-/* SECTION SEPARATION — faint neon divider */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------- */
+/* HEADER + NAVBAR                                    */
+/* -------------------------------------------------- */
+
+header {
+    padding: 20px 32px;
+    border-bottom: 1px solid #1f2933;
+    background: rgba(3, 7, 18, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #e5e7eb;
+}
+
+nav .links a {
+    margin-left: 18px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* -------------------------------------------------- */
+/* MAIN LAYOUT                                        */
+/* -------------------------------------------------- */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+/* -------------------------------------------------- */
+/* HERO SECTION                                       */
+/* -------------------------------------------------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    color: #f9fafb;
+    text-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
+}
+
+.hero h2 {
+    font-size: 26px;
+    margin: 0 0 10px 0;
+    color: #e5e7eb;
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+}
+
+.hero p {
+    color: #9ca3af;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.hero .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #22d3ee, #a855f7);
+    color: #020617;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
+}
+.hero .primary-btn:hover {
+    box-shadow: 0 0 22px rgba(168, 85, 247, 0.55);
+}
+
+.hero .secondary-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* -------------------------------------------------- */
+/* SECTIONS                                           */
+/* -------------------------------------------------- */
+
 .section {
     margin-top: 60px;
     padding-top: 20px;
     border-top: 1px solid rgba(56, 189, 248, 0.12);
 }
 
-/* HERO HEADINGS — soft neon glow */
-.hero h1 {
-    text-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
-}
-
-.hero h2 {
-    text-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
-}
-
-/* CARDS — add neon borders + glow */
-.card {
-    background: linear-gradient(145deg, #0b0f1e, #050816);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    box-shadow:
-        0 0 12px rgba(56, 189, 248, 0.08),
-        inset 0 0 18px rgba(56, 189, 248, 0.05);
-    transition: 0.25s ease;
-}
-
-/* CARD HOVER — neon pulse */
-.card:hover {
-    border-color: rgba(56, 189, 248, 0.45);
-    box-shadow:
-        0 0 22px rgba(56, 189, 248, 0.25),
-        inset 0 0 25px rgba(56, 189, 248, 0.12);
-    transform: translateY(-2px);
-}
-
-/* BADGES — purple neon pop */
-.badge {
-    border-color: rgba(168, 85, 247, 0.45);
-    color: #d8b4fe;
-    background: rgba(168, 85, 247, 0.12);
-}
-
-/* SECTION HEADERS — neon underline */
 .section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #e5e7eb;
     position: relative;
     padding-bottom: 6px;
 }
@@ -92,18 +151,88 @@ body {
     border-radius: 2px;
 }
 
-/* BUTTONS — stronger neon gradient */
-.primary-btn {
-    background: linear-gradient(135deg, #22d3ee, #a855f7);
-    box-shadow: 0 0 14px rgba(168, 85, 247, 0.35);
+.section p {
+    color: #9ca3af;
+    font-size: 14px;
+    max-width: 640px;
 }
 
-.primary-btn:hover {
-    box-shadow: 0 0 22px rgba(168, 85, 247, 0.55);
+/* -------------------------------------------------- */
+/* CARDS                                              */
+/* -------------------------------------------------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
 }
 
-/* FOOTER — faint neon glow */
+.card {
+    border-radius: 14px;
+    padding: 16px;
+    background: linear-gradient(145deg, #0b0f1e, #050816);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.08),
+        inset 0 0 18px rgba(56, 189, 248, 0.05);
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow:
+        0 0 22px rgba(56, 189, 248, 0.25),
+        inset 0 0 25px rgba(56, 189, 248, 0.12);
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #e5e7eb;
+}
+
+.card p {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(168, 85, 247, 0.45);
+    color: #d8b4fe;
+    background: rgba(168, 85, 247, 0.12);
+}
+
+/* -------------------------------------------------- */
+/* FOOTER                                             */
+/* -------------------------------------------------- */
+
 .footer {
     border-top: 1px solid rgba(56, 189, 248, 0.18);
+    padding: 18px 20px;
+    color: #6b7280;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 60px;
     box-shadow: 0 -4px 14px rgba(56, 189, 248, 0.08);
+}
+
+/* -------------------------------------------------- */
+/* RESPONSIVE                                         */
+/* -------------------------------------------------- */
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
 }
