@@ -236,77 +236,81 @@ main {
         font-size: 30px;
     }
 }
-/* --- LEAD FORM UPGRADE --- */
+
+/* --- COMPACT NEON LEAD FORM --- */
 
 .lead-section {
-  margin-top: 60px;
-  padding: 40px 0;
+  margin-top: 30px;
+  padding: 20px 0;
 }
 
 .lead-container {
-  max-width: 520px;
+  max-width: 360px; /* MUCH smaller */
   margin: 0 auto;
-  padding: 30px;
+  padding: 18px 22px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 255, 255, 0.25);
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(0, 255, 255, 0.18);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.12);
 }
 
 .lead-title {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 6px;
   color: #00f6ff;
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
 }
 
 .lead-subtitle {
-  opacity: 0.8;
-  margin-bottom: 25px;
-  font-size: 15px;
+  opacity: 0.75;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .lead-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
 .form-group label {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 6px;
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 4px;
   display: block;
 }
 
 .lead-form input,
 .lead-form textarea {
   width: 100%;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
   color: #fff;
-  font-size: 15px;
+  font-size: 13px;
   transition: 0.2s ease;
 }
 
 .lead-form input:focus,
 .lead-form textarea:focus {
   border-color: #00f6ff;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.35);
   outline: none;
 }
 
 .lead-btn {
-  margin-top: 10px;
+  margin-top: 6px;
   width: 100%;
+  padding: 10px;
+  font-size: 14px;
 }
 
 .form-note {
-  margin-top: 10px;
-  opacity: 0.6;
-  font-size: 13px;
+  margin-top: 6px;
+  opacity: 0.55;
+  font-size: 11px;
   text-align: center;
 }
