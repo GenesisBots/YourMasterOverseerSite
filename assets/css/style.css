@@ -236,3 +236,77 @@ main {
         font-size: 30px;
     }
 }
+/* --- LEAD FORM UPGRADE --- */
+
+.lead-section {
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+.lead-container {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+}
+
+.lead-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #00f6ff;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+}
+
+.lead-subtitle {
+  opacity: 0.8;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.lead-form input,
+.lead-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.lead-form input:focus,
+.lead-form textarea:focus {
+  border-color: #00f6ff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  outline: none;
+}
+
+.lead-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-note {
+  margin-top: 10px;
+  opacity: 0.6;
+  font-size: 13px;
+  text-align: center;
+}
